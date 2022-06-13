@@ -6,6 +6,10 @@ import (
 )
 
 func main() {
+	CheckEnv()
+}
+
+func CheckEnv() {
 	teste := os.Getenv("TEXTO")
 
 	if teste != "" {
