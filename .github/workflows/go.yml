@@ -19,12 +19,10 @@ jobs:
       with:
         go-version: 1.18
 
-    -name: Teste
-      run: env
-
     - name: Build
       env:
         TEXTO: ${{ secrets.TEXTO }}
+      echo: $TEXTO
       run: go build -v ./...
 
     - name: Test
