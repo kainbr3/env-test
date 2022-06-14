@@ -34,10 +34,11 @@ on:
     branches: [ "main" ]
 
 jobs:
-
-steps:
-  - shell: bash
-    env:
-      SUPER_SECRET: ${{ secrets.TEXTO }}
-    run: |
-      example-command "$SUPER_SECRET"
+build:
+  runs-on: ubuntu-latest
+  steps:
+    - shell: bash
+      env:
+        SUPER_SECRET: ${{ secrets.TEXTO }}
+      run: |
+        example-command "$SUPER_SECRET"
