@@ -19,11 +19,10 @@ jobs:
         go-version: 1.18
 
     - name: Build
-      env:
-        TEXTO: ${{ secrets.TEXTO }}
       run: go build -v ./...
 
     - name: Test
-      env:
-        TEXTO: ${{ secrets.TEXTO }}
+    - shell: bash
+        env:
+          TEXTO: ${{ secrets.TEXTO }}
       run: go test -v ./...
