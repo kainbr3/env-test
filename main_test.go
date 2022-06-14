@@ -17,11 +17,7 @@ func TestCheckEnv(t *testing.T) {
 
 	fmt.Println("teste")
 
-	if teste == "ola mundo" {
-		fmt.Println("deu bom")
-	} else {
-		fmt.Println("deu ruim")
-	}
+	CheckEnv()
 
 	assert.NotEmpty(t, teste)
 	assert.Equal(t, teste, "ola mundo")
