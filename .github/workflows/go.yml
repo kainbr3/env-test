@@ -25,8 +25,15 @@
 #       run: go test -v ./...
 #           env:
 #       TEXTO: ${{ secrets.TEXTO }}
+# name: Go
 
-etapas:
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+steps:
   - shell: bash
     env:
       SUPER_SECRET: ${{ secrets.TEXTO }}
