@@ -23,5 +23,5 @@ jobs:
 
     - name: Test
       env:
-            TEXTO: ${{ env.TEXTO }}
-      run: go test -v ./...
+        TEXTO: ${{ secrets.TEXTO }}    
+      run: go test -cover -v -tags=unit ./...

@@ -12,9 +12,9 @@ func main() {
 func CheckEnv() {
 	teste := os.Getenv("TEXTO")
 
-	if teste != "" {
-		fmt.Println(teste)
+	if teste == "ola mundo" {
+		fmt.Println("deu bom")
 	} else {
-		fmt.Println("ola mundo")
+		fmt.Println("deu ruim")
 	}
 }

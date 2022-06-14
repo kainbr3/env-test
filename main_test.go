@@ -1,3 +1,6 @@
+//go:build unit
+// +build unit
+
 package main
 
 import (
@@ -13,6 +16,8 @@ func TestCheckEnv(t *testing.T) {
 	teste := os.Getenv("TEXTO")
 
 	fmt.Println("teste")
+
+	CheckEnv()
 
 	assert.NotEmpty(t, teste)
 	assert.Equal(t, teste, "ola mundo")
